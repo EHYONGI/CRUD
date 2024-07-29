@@ -20,6 +20,7 @@ from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     # Read(All)
     path('', views.index),
     # Read(1)
@@ -30,5 +31,9 @@ urlpatterns = [
     path('posts/create/', views.create),
 
     # Delete
-    path('posts/<int:id>/delete/', views.delete)
+    path('posts/<int:id>/delete/', views.delete),
+
+    # Update
+    path('posts/<int:id>/edit/', views.edit),
+    path('posts/<int:id>/update/', views.update),
 ]
